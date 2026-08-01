@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning IPS Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>ML IPS</h2>
+
+    <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Live Traffic</a></li>
+        <li><a href="#">Attack Detection</a></li>
+        <li><a href="#">Blocked IPs</a></li>
+        <li><a href="#">Logs</a></li>
+        <li><a href="#">Machine Learning</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+
+</div>
+
+<div class="main">
+
+<header>
+
+<h1>Intrusion Prevention System</h1>
+
+<div class="status">
+System Status:
+<span class="online">ONLINE</span>
+</div>
+
+</header>
+
+<div class="cards">
+
+<div class="card">
+<h3>Total Packets</h3>
+<h1 id="packets">125000</h1>
+</div>
+
+<div class="card">
+<h3>Normal Traffic</h3>
+<h1 id="normal">120150</h1>
+</div>
+
+<div class="card">
+<h3>Detected Attacks</h3>
+<h1 id="attacks">4850</h1>
+</div>
+
+<div class="card">
+<h3>Blocked IPs</h3>
+<h1 id="blocked">378</h1>
+</div>
+
+</div>
+
+<div class="chart-container">
+
+<h2>Network Traffic Analysis</h2>
+
+<canvas id="trafficChart"></canvas>
+
+</div>
+
+<div class="tables">
+
+<div class="table-box">
+
+<h2>Recent Attacks</h2>
+
+<table>
+
+<tr>
+<th>Time</th>
+<th>Source IP</th>
+<th>Attack</th>
+<th>Status</th>
+</tr>
+
+<tr>
+<td>10:22 AM</td>
+<td>192.168.1.25</td>
+<td>DDoS</td>
+<td class="danger">Blocked</td>
+</tr>
+
+<tr>
+<td>10:30 AM</td>
+<td>172.16.0.15</td>
+<td>Port Scan</td>
+<td class="danger">Blocked</td>
+</tr>
+
+<tr>
+<td>10:41 AM</td>
+<td>10.0.0.20</td>
+<td>SQL Injection</td>
+<td class="danger">Blocked</td>
+</tr>
+
+<tr>
+<td>11:00 AM</td>
+<td>192.168.0.45</td>
+<td>Brute Force</td>
+<td class="danger">Blocked</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="table-box">
+
+<h2>Blocked IP Addresses</h2>
+
+<table>
+
+<tr>
+<th>IP Address</th>
+<th>Date</th>
+<th>Reason</th>
+</tr>
+
+<tr>
+<td>192.168.1.25</td>
+<td>Today</td>
+<td>DDoS Attack</td>
+</tr>
+
+<tr>
+<td>172.16.0.15</td>
+<td>Today</td>
+<td>Port Scan</td>
+</tr>
+
+<tr>
+<td>10.0.0.20</td>
+<td>Today</td>
+<td>SQL Injection</td>
+</tr>
+
+<tr>
+<td>192.168.0.45</td>
+<td>Today</td>
+<td>Brute Force</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="model">
+
+<h2>Machine Learning Model</h2>
+
+<p><strong>Algorithm:</strong> Random Forest</p>
+
+<p><strong>Accuracy:</strong> 98.7%</p>
+
+<p><strong>Precision:</strong> 98.2%</p>
+
+<p><strong>Recall:</strong> 97.9%</p>
+
+<p><strong>F1 Score:</strong> 98.0%</p>
+
+<button>Start Monitoring</button>
+
+<button>Stop Monitoring</button>
+
+<button>Retrain Model</button>
+
+</div>
+
+<footer>
+
+Machine Learning Intrusion Prevention System © 2026
+
+</footer>
+
+</div>
+
+<script>
+
+const ctx = document.getElementById('trafficChart');
+
+new Chart(ctx, {
+
+type:'line',
+
+data:{
+
+labels:[
+'1',
+'2',
+'3',
+'4',
+'5',
+'6',
+'7',
+'8'
+],
+
+datasets:[{
+
+label:'Traffic',
+
+data:[
+50,
+120,
+90,
+180,
+130,
+220,
+180,
+260
+]
+
+}]
+
+}
+
+});
+
+</script>
+
+</body>
+
+</html>
